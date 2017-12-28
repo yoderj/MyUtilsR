@@ -7,6 +7,8 @@ Maintainer: mabadgeley <mabadgeley@gmail.com>
 Description:
     A toolbox full of utility functions that I would want always available
     on all of my machines
+URL: https://git.nak.co/mabadgeley/MyUtils
+BugReports: https://git.nak.co/mabadgeley/MyUtils/issues
 License: MIT
 Encoding: UTF-8
 LazyData: true

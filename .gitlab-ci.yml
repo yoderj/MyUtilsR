@@ -1,8 +1,6 @@
 image: rocker/rstudio
 test:
     script:
-        - R -e 'install.packages(c("purrr"))'
         - R CMD build . --no-build-vignettes --no-manual
         - PKG_FILE_NAME=$(ls -lt *.tar.gz | head -n 1)
         - R CMD check "${PKG_FILE_NAME}" --no-build-vignettes --no-manual
-        - R -e 'devtools::test()'

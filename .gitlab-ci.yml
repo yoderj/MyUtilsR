@@ -3,4 +3,5 @@ test:
   script:
     - R CMD build . --no-build-vignettes --no-manual
     - R CMD check "MyUtils" --no-build-vignettes --no-manual
+    - R -e 'install.packages("devtools")'
     - R -e 'devtools::test()'

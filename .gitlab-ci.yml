@@ -1,4 +1,4 @@
-simage: rocker/rstudio
+image: rocker/rstudio
 test:
   script:
     - R CMD build . --no-build-vignettes --no-manual

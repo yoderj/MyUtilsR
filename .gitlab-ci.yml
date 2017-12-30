@@ -5,5 +5,5 @@ test:
     - R CMD check "MyUtils" --no-build-vignettes --no-manual
     - apt update
     - apt install zlib1g-dev
-    - R -e 'install.packages("devtools")'
+    - R -e 'install.packages(c("devtools", "testthat"))'
     - R -e 'devtools::test()'

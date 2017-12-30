@@ -3,6 +3,7 @@ test:
   script:
     - R CMD build . --no-build-vignettes --no-manual
     - R CMD check "MyUtils" --no-build-vignettes --no-manual
-    - apt-get install zlib1g-dev
+    - apt update
+    - apt install zlib1g-dev
     - R -e 'install.packages("devtools")'
     - R -e 'devtools::test()'

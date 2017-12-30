@@ -1,9 +1,5 @@
 # Helpers ----
 
-if (interactive()) {
-    test_chrs <<- MyUtils::gen_test_suite()
-}
-
 #' Split a string vector into a list of string piece vectors.
 #'
 #' First, a replacement is performed at alphanumeric piece edges to create

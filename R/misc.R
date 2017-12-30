@@ -7,7 +7,7 @@
 #' @export
 date_time_stamp <- function(){format(Sys.time(), "%Y%m%d_%H%M")}
 
-
+#
 #' Extract the 'stem' from a file path (the filename without the extension).
 #'
 #' Useful for providing unique names to filepath vectors

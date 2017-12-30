@@ -18,4 +18,5 @@ len <- length
 #' @export
 s <- function(...) {stopifnot(interactive()); str(...)}
 
-
+#' @export
+sn <- function(...) {purrr::set_names(...)}

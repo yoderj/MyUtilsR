@@ -135,3 +135,31 @@ str_case_camel <- function(x_chr, lower=TRUE) {
         return(x_UpperCamelCase)
     }
 }
+
+
+# Stringr wrappers ----
+x_chr=letters
+pattern=rebus::or("a", "b")
+
+#' Wrapper for stringr to retain names.
+#'
+#' mimicks the behavior of \code{\link[stringr]{str_subset}}
+#' but works through \code{\link[stringr]{str_detect}}
+#'
+#' @param x_chr a vector of characters to subset
+#' @param pattern character to match by
+#'
+#' @return character with equal len or shorter than x_chr
+#' @export
+#'
+#' @examples
+#' str_subset(letters %>% purrr::set_names(), rebus::or("a", "b"))
+str_subset <- function(x_chr, pattern) {
+    keep_idx <- str_detect(x_chr, pattern)
+    out <- x_chr[keep_idx]
+    if (!is.null(names(x_chr))) {
+        names(out) <- names(x_chr)[keep_idx]
+    }
+    out
+}
+

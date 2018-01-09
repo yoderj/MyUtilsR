@@ -2,8 +2,3 @@ image: rocker/rstudio
 test:
   script:
     - R CMD build . --no-build-vignettes --no-manual
-    - # R CMD check "MyUtils" --no-build-vignettes --no-manual
-    - # apt update
-    - # apt install zlib1g-dev
-    - # R -e 'install.packages(c("devtools", "testthat"))'
-    - # R -e 'devtools::test()'

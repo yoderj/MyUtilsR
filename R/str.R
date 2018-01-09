@@ -134,9 +134,6 @@ str_case_camel <- function(x_chr, lower=TRUE) {
 
 
 # Stringr wrappers ----
-x_chr=letters
-pattern=rebus::or("a", "b")
-
 #' Wrapper for stringr to retain names.
 #'
 #' mimicks the behavior of \code{\link[stringr]{str_subset}}

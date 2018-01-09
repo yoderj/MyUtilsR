@@ -3,14 +3,12 @@
 # Tolerate NAs ----
 #' @export
 max_ <- function (...) max(na.rm = TRUE, ...)
-
 #' @export
 min_ <- function(...) min(na.rm = TRUE, ...)
-
-
 #' @export
 sum_ <- function (...) sum(na.rm = TRUE, ...)
-
+#' @export
+mean_ <- function(...) mean(na.rm=TRUE, ...)
 #' @export
 table_ <- function (...) table(useNA = "ifany", ...)
 

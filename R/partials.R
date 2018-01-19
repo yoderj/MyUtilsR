@@ -14,8 +14,24 @@ table_ <- function (...) table(useNA = "ifany", ...)
 
 
 # Control output ----
+
+#' Wrapper for \code{\link[utils]{str}}
+#'
+#' @param object objects to inspect
+#' @param ... args passed to str
+#'
+#' @return side effect result of `str()` call
+#'
 #' @export
-str_ <- function (...) str(max.level = 1, ...)
+#' @examples
+#' s(mtcars)
+#' s(mtcars, list.len=Inf)
+str_ <- s <- function (object, list.len=10, max.level=2, strict.width="cut", ...)
+{
+    str(object, list.len=list.len,
+        max.level=max.level, strict.width=strict.width, ...)
+}
+
 #' @export
 lib <- function (...) library(warn.conflicts = FALSE, quietly = TRUE, ...)
 
